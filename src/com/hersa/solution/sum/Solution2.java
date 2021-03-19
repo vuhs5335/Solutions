@@ -7,9 +7,9 @@ public class Solution2 {
 
         public static void main(String[] args){
             System.out.println(lengthOfLongestSubstring(""));
-            int d = 7;
         }
         public static int lengthOfLongestSubstring(String s) {
+
             if("".equals(s)){
                 return 0;
             }
@@ -17,15 +17,13 @@ public class Solution2 {
             List<Character> strings = new ArrayList<Character>();
 
             int longest = 0;
-            int count = 0;
+            int count  = 0;
 
-            /* dvdf
-            *  abcabcbb*/
             for(int i = 0; i < s.length() ; i++){
 
                 Character v = s.charAt(i);
 
-                // if contains , we need to set the index back to the initial occurance
+                // if contains , we need to set the index back to the last occurrence
                 // and process from there. we start over from there.
                 if(strings.contains(v)){
 
@@ -34,7 +32,6 @@ public class Solution2 {
                     i = index;
 
                     count  = 0;
-
 
                     strings.clear();
 
@@ -49,7 +46,6 @@ public class Solution2 {
                 if(count > longest){
                     longest = count;
                 }
-
             }
 
             return longest;
