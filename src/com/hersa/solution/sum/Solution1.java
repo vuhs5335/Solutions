@@ -10,6 +10,7 @@ class Solution1 {
         //n1.next.next = new ListNode(9);
 
         ListNode n2 = new ListNode(1);
+
         n2.next = new ListNode(9);
         n2.next.next = new ListNode(9);
         n2.next.next.next = new ListNode(9);
@@ -20,7 +21,8 @@ class Solution1 {
         n2.next.next.next.next.next.next.next.next = new ListNode(9);
         n2.next.next.next.next.next.next.next.next.next = new ListNode(9);
         n2.next.next.next.next.next.next.next.next.next.next = new ListNode(9);
-       ListNode sol =  addTwoNumbers(n1, n2);
+
+        ListNode sol =  addTwoNumbers(n1, n2);
         System.out.println(sol);
     }
 
